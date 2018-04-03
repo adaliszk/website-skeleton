@@ -1,0 +1,27 @@
+{
+  "name": "website-skeleton",
+  "description": "A simple Native WebComponent bundle to create progressive websites",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Ádám Liszkai",
+    "email": "adaliszk@gmail.com",
+    "url": "https://twitter.com/adaliszk"
+  },
+  "main": "serve.js",
+  "scripts": {
+    "serve": "nodemon devserver.js"
+  },
+  "dependencies": {
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.1"
+  },
+  "devDependencies": {
+    "chalk": "^2.3.0",
+    "console": "^0.6.4",
+    "express": "^4.16.1",
+    "fs": "^0.0.1-security",
+    "nodemon": "^1.12.1",
+    "process": "^0.11.10"
+  }
+}
