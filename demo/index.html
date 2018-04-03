@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Website-Skeleton Demo</title>
+    <!-- Reset HTML Styling -->
+    <style> body, html { margin: 0; padding: 0; height: 100%; width: 100%; }</style>
+    <!-- Skeleton Shell Styling -->
+    <style>
+
+    </style>
+</head>
+<body>
+    <site-skeleton active-page="overview" api-url="/api" api-type="rest" regions="header,navigation,content,right,footer">
+        <!-- Header -->
+        <header slot="header">
+            <h1>Website-Skeleton</h1>
+        </header>
+        <!-- Navigation -->
+        <nav slot="navigation">
+            <a href="./" data-page="overview">Overview</a>
+            <a href="./features" data-page="features">Features</a>
+            <a href="./compatibility" data-page="support">Compatibility</a>
+            <a href="./getting-involved" data-page="getting-involved">Getting Involved</a>
+            <a href="./api" data-page="api" >API</a>
+            <a href="./examples" data-page="examples" >Examples</a>
+        </nav>
+        <!-- Content -->
+        <main slot="content">
+            <content-section id="overview" api-endpoint="page/overview">
+
+            </content-section>
+            <content-section id="features" api-endpoint="page/features">
+
+            </content-section>
+            <content-section id="compatibility" api-endpoint="page/compatibility">
+
+            </content-section>
+            <content-section id="getting-involved" api-endpoint="page/getting-involved">
+
+            </content-section>
+            <content-section id="api" api-endpoint="page/api">
+
+            </content-section>
+            <content-section id="examples" api-endpoint="page/examples">
+
+            </content-section>
+        </main>
+        <!-- Sidebar -->
+        <aside slot="right">
+
+        </aside>
+    </site-skeleton>
+
+    <!-- Load WebComponents or additional logic -->
+    <script type="module">
+        // Import the element classes
+        import {Skeleton} from "/dist/skeleton.js";
+
+        // Register the elements
+        customElements.define('site-skeleton', Skeleton.WebsiteElement);
+        customElements.define('content-section', Skeleton.PageElement);
+    </script>
+</body>
