@@ -3,12 +3,29 @@
 <head>
     <meta charset="UTF-8" />
     <title>Website-Skeleton Demo</title>
-    <!-- Reset HTML Styling -->
-    <style> body, html { margin: 0; padding: 0; height: 100%; width: 100%; }</style>
-    <!-- Skeleton Shell Styling -->
-    <style>
-
-    </style>
+    <meta type="description" content="A basic demo about a Website-Skeleton WebComponent bundle, it covers a really base website structure with different pages pre-loaded into the DOM" />
+    <!-- Shell Styling -->
+    <style>body, html { margin: 0; padding: 0; height: 100%; width: 100%; }</style>
+    <!-- Microdata -->
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "HowTo",
+        "accessibilityAPI": "ARIA",
+        "accessibilityControl": ["fullKeyboardControl", "fullMouseControl"],
+        "accessibilityFeature": ["alternativeText"],
+        "accessibilityHazard": ["noFlashingHazard", "noMotionSimulationHazard", "noSoundHazard"],
+        "name": "Website-Skeleton Demo"
+        "description": "A basic demo about a Website-Skeleton WebComponent bundle, it covers a really base website structure with different pages pre-loaded into the DOM",
+        "publisher": {
+            "@type": "Person",
+            "name": "Ádám Liszkai"
+            "email": "mailto:adalisizk@gmail.com",
+            "jobTitle": "Software Developer",
+            "url": "https://twitter.com/adaliszk"
+        }
+    }
+    </script>
 </head>
 <body>
     <site-skeleton active-page="overview" api-url="/api" api-type="rest" regions="header,navigation,content,right,footer">
@@ -28,28 +45,32 @@
         <!-- Content -->
         <main slot="content">
             <content-section id="overview" api-endpoint="page/overview">
-
+                &nbsp;
             </content-section>
             <content-section id="features" api-endpoint="page/features">
-
+                &nbsp;
             </content-section>
             <content-section id="compatibility" api-endpoint="page/compatibility">
-
+                &nbsp;
             </content-section>
             <content-section id="getting-involved" api-endpoint="page/getting-involved">
-
+                &nbsp;
             </content-section>
             <content-section id="api" api-endpoint="page/api">
-
+                &nbsp;
             </content-section>
             <content-section id="examples" api-endpoint="page/examples">
-
+                &nbsp;
             </content-section>
         </main>
         <!-- Sidebar -->
         <aside slot="right">
-
+            &nbsp;
         </aside>
+        <!-- Footer -->
+        <footer slot="footer">
+            MIT Copyright &copy; 2018 - Ádám Liszkai &lt;adaliszk@gmail.com&gt;
+        </footer>
     </site-skeleton>
 
     <!-- Load WebComponents or additional logic -->
@@ -62,3 +83,4 @@
         customElements.define('content-section', Skeleton.PageElement);
     </script>
 </body>
+</html>
